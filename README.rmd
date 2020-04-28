@@ -1,6 +1,6 @@
 ---
 title: "Bayesian networks for human / mouse morphology comparison"
-output: html_document
+output: md_document
 ---   
 
 # What 
