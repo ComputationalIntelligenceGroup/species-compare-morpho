@@ -1,0 +1,60 @@
+---
+title: "Bayesian networks for human / mouse morphology comparison"
+output: html_document
+---
+
+
+# Paper
+The code is available as an RMarkdown file with installation and usage instructions. The Bayesian network models are provided as bnlearn () objects that can be used for inference and inspection.
+
+# What 
+This repository contains the Bayesian network models underlying our paper, 'Comparing basal dendrite branches in human and mouse hippocampal CA1 pyramidal neurons with Bayesian networks' [] link. There is detailed documentation in on the models in the paper.   
+
+The models are `bnlearn` [link] objects. You can use them for probabilistic inference and structure / parameters analysis. Give an example of a model and how it can be used:    
+
+There are 9 models. They are as follows and their names are:      
+
+```{r} 
+# plot(bn.net(bn_term))
+```
+
+
+# Install and load bnlearn
+You will need the `bnlearn` R package.
+```{r}
+# install.packages('bnlearn')
+```
+
+```{r, results='hide'}
+library(bnlearn)
+``` 
+ 
+# Load the models    
+The Bayesian networks are located in the `models` folder, as `R` objects. The `load()` function makes them available in memory. Their name is the name of their file, minus the extension (e.g., ).`bn.fit` 
+
+## Terminal branches  
+```{r}
+load('models/bn_term.rdata') # bn_term 
+load('models/bn_term_human.rdata') # bn_term_human 
+load('models/bn_term_mouse.rdata') # bn_term_mouse
+``` 
+
+## Non-terminal branches 
+```{r}
+load('models/bn_nonterm.rdata') # bn_nonterm 
+load('models/bn_nonterm_human.rdata') # bn_nonterm_human 
+load('models/bn_nonterm_mouse.rdata') # bn_nonterm_mouse
+```
+
+
+## All branches
+```{r} 
+load('models/bn.rdata') # bn
+load('models/bn_human.rdata') # bn_human 
+load('models/bn_mouse.rdata') # bn_mouse
+```
+
+
+# Using the models
+
+
